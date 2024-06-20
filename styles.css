@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    background-image: url('img/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.profile-picture {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, #a94b00, #c37d45, #b87333, #b7410e, #cc7722, #a94b00, #f1f1f1, #c37d45, #b87333, #b7410e, #cc7722, #f1f1f1);   
+    background-size: 300% 300%;
+    background-position: center;
+    border-radius: 3px;
+    animation: rainbow-border 2s linear infinite;
+    margin: 0 auto;
+}
+
+
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.header-info {
+    margin-top: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+#menu, #cart {
+    width: 45%;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#cart {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 0.5rem;
+}
+
+@keyframes rainbow-border {
+    0% {
+        background-position: 0% ;
+    }
+   
+    50%{
+        background-position: 300% ;
+    }
+  
+    100% {
+        background-position: 0%; 
+        
+}
+}

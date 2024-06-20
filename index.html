@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Minha Hamburgueria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile-picture">
+            <img src="img/Logotipo.png" alt="profile" class="header-img">
+        </div>
+        <div class="header-info">
+            <p>Endereço: Rua dos Hambúrgueres, 123, Centro, Cidade</p>
+            <p id="status"></p>
+        </div>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Cardápio</h2>
+            <div class="menu-item">
+                <h3>Hell's Classic Burger</h3>
+                <p>Delicioso hambúrguer com queijo, alface, tomate e maionese especial.</p>
+                <button onclick="addToCart('Hells Classic ', 20)">Adicionar ao Carrinho - R$ 20</button>
+            </div>
+            <div class="menu-item">
+                <h3>Magma Burger</h3>
+                <p>Pão de hambúrguer, carne angus, queijo mozzarella, tomate seco, rúcula, pesto de manjericão.</p>
+                <button onclick="addToCart('Magma Burger', 25)">Adicionar ao Carrinho - R$ 25</button>
+            </div>
+            <div class="menu-item">
+                <h3>Fogo Burger</h3>
+                <p>Pão de hambúrguer, carne angus, queijo pepper jack, bacon defumado, molho de pimenta.</p>
+                <button onclick="addToCart('Fogo Burger', 40)">Adicionar ao Carrinho - R$ 40</button>
+            </div>
+            <div class="menu-item">
+                <h3>Labareda Burger</h3>
+                <p>Pão de hambúrguer artesanal, carne angus, queijo gouda, bacon caramelizado, alface e tomate frescos, maionese especial.</p>
+                <button onclick="addToCart('Labareda Burger', 35)">Adicionar ao Carrinho - R$ 35</button>
+            </div>
+            <div class="menu-item">
+                <h3>Caldeirão Burger</h3>
+                <p>Pão de hambúrguer artesanal, carne angus, queijo parmesão, rúcula, tomate confit, molho pesto.</p>
+                <button onclick="addToCart('Caldeirão Burger', 27)">Adicionar ao Carrinho - R$ 27</button>
+            </div>
+            <div class="menu-item">
+                <h3>Vulcão Burger</h3>
+                <p>Pão de hambúrguer, carne angus, queijo brie, cogumelos salteados, molho de trufas.</p>
+                <button onclick="addToCart('Vulcão Burger', 41)">Adicionar ao Carrinho - R$ 41</button>
+            </div>
+            <!-- mais itens -->
+        </section>
+        <section id="cart">
+            <h2>Carrinho</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: R$ 0</p>
+            <label for="address">Endereço de Entrega:</label>
+            <input type="text" id="address" placeholder="Digite seu endereço">
+            <button onclick="checkout()">Finalizar Pedido</button>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
